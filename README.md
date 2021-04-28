@@ -1,5 +1,4 @@
-# binancebot
-for doing cool stuff with the binance api
+# binance-exporter
 "You know I'm born to lose, and gambling's for fools, but that's the way I like it baby I don't wanna live for ever" - Edward Alan Clarke / Ian Kilmister / Philip John Taylor
 
 ## quickstart
@@ -13,13 +12,13 @@ for doing cool stuff with the binance api
 Requires `INFLUX_HOST` to be set in .env - otherwise all other influx settings will be ignored.
 Only works in `run` mode.
 
-connect to your influxdb via cli `influx`
+Connect to your influxdb via cli `influx`
 
-create user: `CREATE USER username WITH PASSWORD password WITH ALL PRIVILEGES`
+Create user: `CREATE USER username WITH PASSWORD password WITH ALL PRIVILEGES`
 
-create database: `CREATE DATABASE binance`
+Create database: `CREATE DATABASE binance`
 
-## Prometheus metrics (optional)
+## prometheus metrics (optional)
 Requires `PROMETHEUS_PORT` to be set in .env
 Only works in `run` mode.
 Prometheus metrics are generated at `/metrics`.
@@ -33,10 +32,10 @@ Example config for prometheus:
     - targets: ['10.42.0.19:9000']
 ```
 
-sample grafana dashboards are provided in [./grafana/].
+Sample grafana dashboards are provided in [./grafana/].
 
-## Run continously via supervisord
-Assuming you are able to run it locally via `$ ./binancebot run`, here is how you would run it on your favourite server in the background by utilizing supervisord [http://supervisord.org/]
+## run continously via supervisord
+Assuming you are able to run it locally via `$ ./binancebot run`, here is how you would run it on your favourite server in the background by utilizing supervisord [http://supervisord.org/].
 
 The following steps assume you are running FreeBSD, however, the installation should be very similar under any other *nix system.
 
